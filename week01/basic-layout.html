@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/layout.css">
 </head>
+
 <body>
     <header>
-        <h1 contenteditable>Header</h1>
+        <h1 class="grid-object-1">Header Content</h1>
+        <nav>
+            <ul class="flexbox-container">
+                <li><a href="#" title="Home" class="flexbox-item flexbox-item-1">Home</a></li>
+                <li><a href="#" title="Projects" class="flexbox-item flexbox-item-2">Projects</a></li>
+                <li><a href="#" title="Services" class="flexbox-item flexbox-item-3">Services</a></li>
+                <li><a href="#" title="Contact Us" class="flexbox-item flexbox-item-4">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="left-sidebar" contenteditable>Left Sidebar</div>
-    <main contenteditable></main>
-    <div class="right-sidebar" contenteditable>Right Sidebar</div>
-    <footer contenteditable>Footer Content</footer>
+    <main class="grid-object-3">Main Content</main>
+    <div class="grid-object-4">Aside Content</div>
+    <footer class="grid-object-5">Footer Content</footer>
 </body>
+
 </html>
