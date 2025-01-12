@@ -149,7 +149,7 @@ div img {
     align-items: center;
 }
 
-footer {
+.grid-item-9 {
     grid-column: 1 / 4;
     grid-row: 3 / 4;
     text-align: center;
