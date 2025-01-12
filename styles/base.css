@@ -22,7 +22,8 @@ header {
     grid-row: 1 / 2;
 }
 
-h1 {
+h1,
+h2 {
     font-family: "Fjalla One", serif;
     font-weight: 400;
     font-style: normal;
@@ -30,7 +31,7 @@ h1 {
 }
 
 .grid-item-1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: center;
     background-color: #3466AA;
     padding: 1rem;
@@ -96,8 +97,8 @@ main {
     grid-template-rows: auto 1fr;
 }
 
-section h1 {
-    font-size: 1rem;
+section h2 {
+    font-size: 1.5rem;
     text-align: center;
     background-color: #3466AA;
     border-radius: 10px 10px 0 0;
@@ -115,7 +116,8 @@ section h1 {
 .grid-item-5 {
     grid-row: 3 / 4;
     color: #1C1C1C;
-    background-color: #808080;
+    background-color: #F1F1F1;
+    text-decoration: underline;
     border-radius: 0;
 }
 
