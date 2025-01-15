@@ -1,0 +1,26 @@
+/*395A7F, 6E9FC1, A3CAE9, E9ECEE, ACACAC*/
+
+body {
+    font-family: "Roboto", serif;
+}
+
+header,
+main,
+footer {
+    max-width: 640px;
+    border: 2px solid #6E9FC1;
+    background-color: #A3CAE9;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 1rem;
+}
