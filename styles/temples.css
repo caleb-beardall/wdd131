@@ -21,7 +21,7 @@ h1 {
     text-align: left;
     font-family: "Fjalla One", serif;
     font-size: 1.5rem;
-    color: #F1F1F1;
+    color: white;
     font-weight: 400;
     padding: 1rem 1rem 0 1rem;
 }
@@ -41,7 +41,7 @@ nav {
     font-size: 1.5rem;
     border: 0;
     background: none;
-    color: #F1F1F1;
+    color: white;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -60,7 +60,7 @@ nav {
     flex-direction: column;
     list-style: none;
     background-color: #114084;
-    color: #F1F1F1;
+    color: white;
 }
 
 .navigation a {
@@ -68,12 +68,12 @@ nav {
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    color: #F1F1F1;
+    color: white;
 }
 
 .navigation a:hover {
     background-color: #808080;
-    color: #1C1C1C;
+    color: black;
     font-weight: 700;
 
 }
@@ -101,6 +101,6 @@ footer {
     flex-direction: column;
     text-align: center;
     background-color: #3466AA;
-    color: #F1F1F1;
+    color: white;
     padding: 1rem;
 }
