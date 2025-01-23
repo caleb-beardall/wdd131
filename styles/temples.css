@@ -1,0 +1,106 @@
+/*
+114084, 3466AA, 82B7DC, F1F1F1, 808080, 1C1C1C
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    min-width: 320px;
+}
+
+header {
+    background-color: #3466AA;
+}
+
+h1 {
+    text-align: left;
+    font-family: "Fjalla One", serif;
+    font-size: 1.5rem;
+    color: #F1F1F1;
+    font-weight: 400;
+    padding: 1rem 1rem 0 1rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #114084;
+    text-align: center;
+    margin: 1rem;
+}
+
+nav {
+    margin: 1rem auto;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #F1F1F1;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰"
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #114084;
+    color: #F1F1F1;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #F1F1F1;
+}
+
+.navigation a:hover {
+    background-color: #808080;
+    color: #1C1C1C;
+    font-weight: 700;
+
+}
+
+.open a {
+    display: block;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    place-items: center;
+    margin: 1rem;
+}
+
+figcaption {
+    margin: .5rem;
+    text-align: center;
+    color: #114084;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #3466AA;
+    color: #F1F1F1;
+    padding: 1rem;
+}

@@ -1,0 +1,44 @@
+@media screen and (min-width: 520px) {
+
+    body {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: grid;
+    }
+
+    h1 {
+        padding: 1rem;
+    }
+
+    header nav {
+        grid-column: 2 / 4;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #3466AA;
+        height: 100%;
+    }
+
+    .navigation a {
+        display: block;
+        align-content: center;
+        height: 100%;
+    }
+}
