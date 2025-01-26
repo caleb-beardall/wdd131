@@ -1,0 +1,65 @@
+/* #8b0000, #9f3434, #2e2e2e, #331d1d, 	#8d7051, #cdb79e, #ede1b1, #fafad2
+#e72222, #e7a43b, #8cb8c5, #d0839a, #ddb1b1
+#450b00, #a51200, #e75710, #fb8239, #fcd8b6
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    min-width: 320px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: white;
+    background-color: #9f3434;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    background-color: #450b00;
+    padding: 1rem 0;
+}
+
+#data-article {
+    background-color: white;
+}
+
+#weather-article {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    padding: 1rem;
+}
+
+.table {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.25rem 0;
+}
+
+.title {
+    font-weight: 700;
+    text-align: right;
+    padding: 0 0.5rem 0 0;
+}
+
+.data {
+    text-align: left;
+    padding: 0 0 0 0.5rem;
+}

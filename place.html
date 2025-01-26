@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page</title>
+    <meta name="author" content="Caleb Beardall">
+    <meta name="description" content="Learn about the country of Japan, an island nation in the Pacific Ocean.">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Japan</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 750px)" srcset="images\place-hero-large.webp" width="1000" height="500">
+                <img src="images\place-hero-small.webp" alt="The Kiyomizu-dera Temple" width="500" height="750">
+            </picture>
+        </div>
+        <article id="data-article">
+            <h2>Data</h2>
+            <div class="table">
+                <div class="row">
+                    <p class="title">Area:</p>
+                    <p class="data">338,000 sq km</p>
+                </div>
+                <div class="row">
+                    <p class="title">Population:</p>
+                    <p class="data">125,500,000</p>
+                </div>
+                <div class="row">
+                    <p class="title">Capital:</p>
+                    <p class="data">Tokyo</p>
+                </div>
+                <div class="row">
+                    <p class="title">Language:</p>
+                    <p class="data">Japanese</p>
+                </div>
+                <div class="row">
+                    <p class="title">Currency:</p>
+                    <p class="data">Japanese Yen</p>
+                </div>
+                <div class="row">
+                    <p class="title">Time Zone:</p>
+                    <p class="data">GMT+9</p>
+                </div>
+                <div class="row">
+                    <p class="title">Area Code:</p>
+                    <p class="data">+81</p>
+                </div>
+                <div class="row">
+                    <p class="title">Internet TLD:</p>
+                    <p class="data">.jp</p>
+                </div>
+        </article>
+        <article id="weather-article">
+            <h2>Weather</h2>
+            <div class="table">
+                <div class="row">
+                    <p class="title">Temperature:</p>
+                    <p class="data">12°C</p>
+                </div>
+                <div class="row">
+                    <p class="title">Conditions:</p>
+                    <p class="data">Sunny</p>
+                </div>
+                <div class="row">
+                    <p class="title">Wind:</p>
+                    <p class="data">41 km/h</p>
+                </div>
+                <div class="row">
+                    <p class="title">Wind Chill:</p>
+                    <p class="data" id="wind-chill"></p>
+                </div>
+        </article>
+    </main>
+</body>
+
+</html>
