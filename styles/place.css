@@ -3,6 +3,12 @@
 #450b00, #a51200, #e75710, #fb8239, #fcd8b6
 */
 
+:root {
+    --main-color: #9f3434;
+    --secondary-color: #450b00;
+    --tertiary-color: white;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,8 +23,8 @@ body {
 }
 
 header h1 {
-    color: white;
-    background-color: #9f3434;
+    color: var(--tertiary-color);
+    background-color: var(--main-color);
     text-align: center;
     padding: 1.5rem;
 }
@@ -26,21 +32,40 @@ header h1 {
 .hero img {
     width: 100%;
     height: auto;
-    background-color: #450b00;
+    background-color: var(--secondary-color);
     padding: 1rem 0;
 }
 
-#data-article {
-    background-color: white;
-}
-
+#data-article,
 #weather-article {
-    background-color: white;
+    background-color: var(--tertiary-color);
 }
 
 h2 {
     text-align: center;
     padding: 1rem;
+}
+
+main {
+    background-color: var(--secondary-color);
+}
+
+#weather-article h2 {
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.sunny-container {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.sunny {
+    width: 50%;
+    height: auto;
 }
 
 .table {
@@ -62,4 +87,13 @@ h2 {
 .data {
     text-align: left;
     padding: 0 0 0 0.5rem;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
 }

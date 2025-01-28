@@ -26,15 +26,28 @@
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
     }
 
+    #weather-article h2 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .sunny-container {
+        display: none;
+    }
+
     .table {
         padding: 1rem;
     }
 
     h2 {
         position: relative;
-        background-color: #450b00;
+        background-color: var(--secondary-color);
         left: -1rem;
         text-align: left;
-        color: white;
+        color: var(--tertiary-color);
+    }
+
+    #weather-article h2::after {
+        content: " ☀️"
     }
 }
