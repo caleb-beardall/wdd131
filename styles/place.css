@@ -36,6 +36,10 @@ header h1 {
     padding: 1rem 0;
 }
 
+main {
+    background-color: var(--secondary-color);
+}
+
 #data-article,
 #weather-article {
     background-color: var(--tertiary-color);
@@ -44,10 +48,6 @@ header h1 {
 h2 {
     text-align: center;
     padding: 1rem;
-}
-
-main {
-    background-color: var(--secondary-color);
 }
 
 #weather-article h2 {
@@ -90,10 +90,11 @@ main {
 }
 
 footer {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color: var(--tertiary-color);
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 1rem;
+    margin: -0.25rem 0 0 0;
 }
