@@ -48,7 +48,7 @@ h2 {
 
 h3 {
     font-family: "Roboto", serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 0.75rem 0 0 0;
 }
 
@@ -61,11 +61,13 @@ ul {
     font-family: "Raleway", serif;
     line-height: 1.5rem;
     margin: 1rem;
+    padding: 0 1rem;
 }
 
 .large-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    grid-template-rows: auto;
     grid-gap: 1rem;
     margin: 1rem;
 }
@@ -104,5 +106,13 @@ ul {
 @media (min-width: 34rem) {
     .wireframe {
         grid-column: span 2;
+    }
+
+    .large-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        margin: 1rem;
     }
 }
