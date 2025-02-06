@@ -103,7 +103,27 @@ ul {
     background-color: #ffffff;
 }
 
-/* flex: 1 1 100%; */
+figure {
+    margin: 1rem;
+}
+
+figcaption {
+    font-family: "Raleway", serif;
+    text-align: center;
+    margin: 1rem;
+}
+
+.large-layout {
+    width: 100%;
+    height: auto;
+}
+
+.small-layout {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    height: auto;
+}
 
 @media (min-width: 34rem) {
     .wireframe {
