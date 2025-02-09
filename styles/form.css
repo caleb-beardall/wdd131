@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #02577a;
+    --background-color: #f5f5f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    min-width: 320px;
+    max-width: 1024px;
+    background-color: var(--background-color);
+}
+
+h1 {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+.product-review {
+    width: 90%;
+    min-width: 288;
+    margin: 1rem 5%;
+}
+
+fieldset {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset label {
+    display: block;
+    font-size: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+fieldset p {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: red;
+}
+
+.product-review select,
+.product-review input[type="date"],
+.product-review textarea {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 0.5rem 0 1.5rem 0;
+    padding: 0.5rem;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.star-rating label {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: orange;
+}
+
+.checkbox-label {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.checkbox-container {
+    margin: 0rem 0 1rem 0;
+}
+
+.checkbox-container label {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.product-review input[type="checkbox"] {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.product-review input[type="text"] {
+    display: flex;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem;
+}
+
+.product-review select:required,
+.product-review input:required {
+    border: 1px solid red;
+    background-color: #FECDCD;
+}
+
+.product-review select:required:valid,
+.product-review input:required:valid {
+    border: 1px solid green;
+    background-color: #CCFFC4;
+}
+
+input[type="submit"] {
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--main-color);
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    padding: 1rem;
+    margin: 1rem auto 0 auto;
+}
+
+/*----------- Review Page --------------*/
+
+article {
+    width: 90%;
+    margin: 1rem 5%;
+    padding: 1rem;
+    min-width: 288px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25;
+    margin: 0 0 .5rem 0;
+}
+
+article p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
