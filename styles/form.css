@@ -51,7 +51,7 @@ fieldset label {
 .required {
     font-size: 0.75rem;
     font-style: italic;
-    color: red;
+    color: #8B1D1D;
 }
 
 .product-review select,
