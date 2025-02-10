@@ -50,3 +50,5 @@ function createOptions() {
         document.getElementById("productName").appendChild(option);
     });
 }
+
+

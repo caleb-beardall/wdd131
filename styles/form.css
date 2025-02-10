@@ -28,7 +28,6 @@ h1 {
 
 .product-review {
     width: 90%;
-    min-width: 288;
     margin: 1rem 5%;
 }
 
@@ -49,7 +48,7 @@ fieldset label {
     font-weight: 700;
 }
 
-fieldset p {
+.required {
     font-size: 0.75rem;
     font-style: italic;
     color: red;
@@ -79,7 +78,7 @@ fieldset p {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: orange;
 }
 
@@ -161,7 +160,7 @@ article {
 
 article h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 1.25;
+    font-size: 1.25rem;
     margin: 0 0 1rem 0;
 }
 
