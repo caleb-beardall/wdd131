@@ -6,18 +6,6 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-const year = document.querySelector("#year");
-
-const today = new Date();
-
-year.innerHTML = `©<span class="highlight">${today.getFullYear()}</span> | Caleb Beardall | Ogden, Utah`;
-
-let modDate = document.querySelector("#modified-date");
-
-let oLastModif = new Date(document.lastModified);
-
-modDate.innerHTML = `Last Modification: <span class="highlight">${oLastModif.toLocaleString('de-DE')}</span>`;
-
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -101,9 +89,36 @@ const temples = [
     },
 ];
 
-createTempleCard();
+createTempleCard(temples);
 
-function createTempleCard() {
+const allOption = document.querySelector("#all-temples");
+const oldOption = document.querySelector("#old-temples");
+const newOption = document.querySelector("#new-temples");
+const largeOption = document.querySelector("#large-temples");
+const smallOption = document.querySelector("#small-temples");
+
+allOption.addEventListener("click", () => {
+    createTempleCard(temples);
+});
+
+oldOption.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => Number(temple.dedicated.slice(0, 4)) < 1900));
+});
+
+newOption.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => Number(temple.dedicated.slice(0, 4)) > 2000));
+});
+
+largeOption.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+smallOption.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
+function createTempleCard(temples) {
+    document.querySelector(".temples-grid").innerHTML = "";
     temples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
@@ -128,4 +143,13 @@ function createTempleCard() {
 
         document.querySelector(".temples-grid").appendChild(card);
     });
-}
+};
+
+const cYear = document.querySelector("#year");
+const mDate = document.querySelector("#modified-date");
+let copyrightYear = new Date();
+let lastModified = new Date(document.lastModified);
+
+cYear.innerHTML = `©<span class="footer">${copyrightYear.getFullYear()}</span> | Caleb Beardall | Ogden, Utah`;
+mDate.innerHTML = `Last Modification: <span class="footer">${lastModified.toLocaleString('de-DE')}</span>`;
+
