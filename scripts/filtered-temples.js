@@ -147,6 +147,7 @@ function createTempleCard(temples) {
 
 const cYear = document.querySelector("#year");
 const mDate = document.querySelector("#modified-date");
+
 let copyrightYear = new Date();
 let lastModified = new Date(document.lastModified);
 
