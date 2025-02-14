@@ -45,10 +45,10 @@ header ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0;
 }
 
-#careers-button {
+#home-button {
     display: flex;
     justify-self: flex-end;
     place-content: center;
@@ -65,7 +65,7 @@ header ul {
     padding: 0.5rem;
 }
 
-#careers-button a {
+#home-button a {
     color: var(--medium-blue-color);
     text-decoration: none;
     text-transform: uppercase;
@@ -84,7 +84,7 @@ header ul {
     }
 }
 
-#careers-button:hover {
+#home-button:hover {
     cursor: pointer;
     border: 0.15rem solid white;
     background-color: white;
@@ -98,65 +98,63 @@ header ul {
     font-weight: 700;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-family: var(--large-font);
-    font-weight: 900;
-    text-align: center;
-    color: white;
-    margin: 1rem 2rem;
-}
-
-#career-company-links {
-    display: flex;
-    flex-direction: column;
-    background-color: #1C1C1C;
-}
-
-#career-company-links article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-}
-
-#career-company-links img {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#career-company-links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: white;
-    margin: 1rem 0 0 0;
-    padding: 0.25rem 0.5rem;
-}
-
-#career-company-links a:hover {
+.highlight {
     color: var(--medium-blue-color);
-    background-color: white;
-    padding: 0.25rem 0.5rem;
 }
 
-#career-company-links p {
-    text-align: center;
-    color: white;
-    margin: 0.5rem 0 0 0;
+#career-form {
+    display: block;
+    border: none;
+    background-color: #F1F1F1;
+    padding: 1rem;
+}
+
+#career-form h3 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+}
+
+#position-level {
+    margin: 1rem 0 1.5rem 0;
+}
+
+#position-level label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+#position-level input[type="checkbox"] {
+    margin: 0 0.5rem 0 0;
 }
 
 #small-box {
     width: 20%;
     height: 0.15rem;
     background: var(--medium-blue-color);
+    margin: 0 0 1rem 0;
+}
+
+#user-salary {
+    font-size: 1.25rem;
+    color: #1C1C1C;
+    margin: 1rem 0;
+}
+
+#career-form input[type="submit"] {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--medium-blue-color);
+    border: 0.15rem solid var(--medium-blue-color);
+    padding: 0.5rem;
     margin: 1rem 0 0 0;
 }
 
-.highlight {
-    color: var(--medium-blue-color);
+#career-form input[type="submit"]:hover {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--medium-blue-color);
+    border: 0.15rem solid var(--medium-blue-color);
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasatch Front End Developers</title>
+    <meta name="author" content="Caleb Beardall" />
+    <meta name="description"
+        content="Wasatch Front End Developers helps career-focused applicants find jobs in north-central Utah." />
+    <link rel="stylesheet" href="styles/careers.css">
+    <link rel="stylesheet" href="styles/careers-large.css">
+    <script src="scripts/careers.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="colored-bar"></div>
+        <img id="logo" src="https://placekittens.com/160/90" loading="lazy" width="160" height="90"
+            alt="Ogden Utah Temple">
+        <nav>
+            <ul>
+                <li id="home-button"><a href="#" title="Home">Home</a></li>
+                <li id="companies-button"><a href="#" title="Companies">Companies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="product-review">
+            <fieldset id="career-form">
+                <div>
+                    <h3>What are you looking for in your <span class="highlight">career?</span></h3>
+                </div>
+                <div id="small-box"></div>
+                <div>What <span class="highlight">position levels</span> are you considering?</div>
+                <div id="position-level">
+                    <label><input type="checkbox" name="beginner" value="yes">Beginner</label>
+                    <label><input type="checkbox" name="intermediate" value="yes">Intermediate</label>
+                    <label><input type="checkbox" name="advanced" value="yes">Advanced</label>
+                    <label><input type="checkbox" name="expert" value="yes">Expert</label>
+                </div>
+
+                <label for="base-salary">What <span class="highlight">base salary</span> do you require?</label>
+                <div id="user-salary"></div>
+                <input type="range" id="base-salary" name="r" min="0" max="100000" value="50000" step="1000">
+
+                <input type="submit" value="Filter Results">
+            </fieldset>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

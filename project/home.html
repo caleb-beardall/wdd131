@@ -9,28 +9,44 @@
     <meta name="description"
         content="Wasatch Front End Developers helps career-focused applicants find jobs in north-central Utah." />
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/home-large.css">
     <script src="scripts/home.js" defer></script>
 </head>
 
 <body>
     <header>
         <div id="colored-bar"></div>
-        <img id="logo"
-            src="https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/ogden-utah/400x400/ogden-utah-temple-1305069-wallpaper.jpg"
-            loading="lazy" width="100" height="100" alt="Ogden Utah Temple">
-        <h1>Wasatch Front End Developers</h1>
-        <button type="button" id="menu" aria-label="menu"></button>
+        <img id="logo" src="https://placekittens.com/160/90" loading="lazy" width="160" height="90"
+            alt="Ogden Utah Temple">
         <nav>
-            <ul class="navigation">
-                <li><a href="#" title="Home" id="home">Home</a></li>
-                <li><a href="#" title="Job Openings" id="jobs">Old</a></li>
-                <li><a href="#" title="Companies Hiring" id="companies">New</a></li>
+            <ul>
+                <li id="careers-button"><a href="#" title="Careers">Careers</a></li>
+                <li id="companies-button"><a href="#" title="Companies">Companies</a></li>
             </ul>
         </nav>
+        <h1><span class="highlight">Wasatch Front</span> End Developers</h1>
     </header>
     <main>
-        <section>
-            
+        <section id="career-company-links">
+            <article>
+                <img src="images/careers-small-square.webp" loading="lazy" width="500" height="500"
+                    alt="A happy employee.">
+                <a href="#" title="Careers">
+                    <h3>Find Your <span class="highlight">Career</span></h3>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ullam!</p>
+                <div id="small-box"></div>
+                </a>
+            </article>
+            <article>
+                <img src="images/companies-small-square.webp" loading="lazy" width="500" height="500"
+                    alt="A corporation's headquarters">
+                <a href="#" title="Companies">
+                    <h3>Find Your <span class="highlight">Company</span></h3>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, ullam!</p>
+                <div id="small-box"></div>
+            </article>
         </section>
     </main>
 </body>
