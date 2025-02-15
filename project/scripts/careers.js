@@ -30,8 +30,6 @@ const careers = [
         positionName: "Engineering Manager",
         level: "advanced",
         company: "Instructure",
-        companyRating: 3.8,
-        city: "Cottonwood Heights",
         baseSalary: 33000,
         maxSalary: 50000,
         experience: "9",
@@ -42,8 +40,6 @@ const careers = [
         positionName: "Data Scientist",
         level: "expert",
         company: "Ancestry",
-        companyRating: 3.8,
-        city: "Lehi",
         baseSalary: 114000,
         maxSalary: 131000,
         experience: "10+",
@@ -54,8 +50,6 @@ const careers = [
         positionName: "Sr. Software Engineer",
         level: "expert",
         company: "BambooHR",
-        companyRating: 3.9,
-        city: "Draper",
         baseSalary: 121000,
         maxSalary: 161000,
         experience: "10+",
@@ -66,8 +60,6 @@ const careers = [
         positionName: "Software Engineer",
         level: "mid",
         company: "BambooHR",
-        companyRating: 3.9,
-        city: "Draper",
         baseSalary: 87000,
         maxSalary: 127000,
         experience: "3",
@@ -78,8 +70,6 @@ const careers = [
         positionName: "Software Engineer Intern",
         level: "entry",
         company: "BambooHR",
-        companyRating: 3.9,
-        city: "Draper",
         baseSalary: 59000,
         maxSalary: 83000,
         experience: "0",
@@ -90,8 +80,6 @@ const careers = [
         positionName: "Sr. Software Engineer",
         level: "advanced",
         company: "Qualtrics",
-        companyRating: 3.5,
-        city: "Provo",
         baseSalary: 147000,
         maxSalary: 187000,
         experience: "5",
@@ -102,8 +90,6 @@ const careers = [
         positionName: "Software Engineer",
         level: "mid",
         company: "Qualtrics",
-        companyRating: 3.5,
-        city: "Provo",
         baseSalary: 100000,
         maxSalary: 140000,
         experience: "2",
@@ -114,8 +100,6 @@ const careers = [
         positionName: "Software Engineer Intern",
         level: "entry",
         company: "Qualtrics",
-        companyRating: 3.5,
-        city: "Provo",
         baseSalary: 62000,
         maxSalary: 105000,
         experience: "1",
@@ -126,8 +110,6 @@ const careers = [
         positionName: "Sr. Engineering Manager",
         level: "expert",
         company: "Adobe",
-        companyRating: 4.3,
-        city: "Lehi",
         baseSalary: 130000,
         maxSalary: 250000,
         experience: "10+",
@@ -138,8 +120,6 @@ const careers = [
         positionName: "Data Scientist Intern",
         level: "entry",
         company: "Adobe",
-        companyRating: 4.3,
-        city: "Lehi",
         baseSalary: 76000,
         maxSalary: 110000,
         experience: "1",
@@ -158,22 +138,12 @@ function displayCareers(careers) {
         let salaryRange = document.createElement("p");
         let summary = document.createElement("p");
 
-
         positionName.innerHTML = `${career.positionName}`;
         company.innerHTML = `${career.company}`;
         company.setAttribute("id", "company-name");
         salaryRange.innerHTML = `${formattedAmount(career.baseSalary)} - ${formattedAmount(career.maxSalary)}`;
         salaryRange.setAttribute("id", "career-salary");
         summary.innerHTML = `This ${career.level}-level position requires ${career.experience} year(s) of experiance. You can expect a(n) ${career.workEnvironment} work environment and ${career.schedule} schedule.`
-
-        /*
-        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-        area.innerHTML = `<span class"label">Size:</span> ${temple.area} sq ft`;
-        img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy");
-        */
 
         article.appendChild(positionName);
         article.appendChild(company);
@@ -193,6 +163,7 @@ const isIntermediateCheck = document.getElementById("intermediate");
 const isAdvancedChecked = document.getElementById("advanced");
 const isExpertChecked = document.getElementById("expert");
 
+/*
 isBeginnerChecked.addEventListener('change', () => {
     isBeginnerChecked.classList.toggle("checked");
 });
@@ -208,6 +179,7 @@ isAdvancedChecked.addEventListener('change', () => {
 isExpertChecked.addEventListener('change', () => {
     isExpertChecked.classList.toggle("checked");
 });
+*/
 
 function filterCareers(array) {
 
@@ -219,7 +191,7 @@ function filterCareers(array) {
     let careersSection = document.getElementById("careers-grid");
     let noResults = document.createElement("p");
 
-
+    /*
     if (isBeginnerChecked.classList.contains("checked")) {
         beginnerCareers = array.filter(career => career.level === "entry");
     }
@@ -235,10 +207,27 @@ function filterCareers(array) {
     if (isExpertChecked.classList.contains("checked")) {
         expertCareers = array.filter(career => career.level === "expert");
     }
+    */
+
+    if (isBeginnerChecked.checked) {
+        beginnerCareers = array.filter(career => career.level === "entry");
+    }
+
+    if (isIntermediateCheck.checked) {
+        intermediateCareers = array.filter(career => career.level === "mid");
+    }
+
+    if (isAdvancedChecked.checked) {
+        advancedCareers = array.filter(career => career.level === "advanced");
+    }
+
+    if (isExpertChecked.checked) {
+        expertCareers = array.filter(career => career.level === "expert");
+    }
 
     const careerLevels = beginnerCareers.concat(intermediateCareers, advancedCareers, expertCareers);
 
-    const finalCareers = careerLevels.filter(career => career.baseSalary > range.value);
+    const finalCareers = careerLevels.filter(career => career.baseSalary >= range.value);
 
     if (finalCareers.length === 0) {
 
@@ -258,3 +247,14 @@ const filterResults = document.getElementById("filter-results");
 filterResults.addEventListener('click', () => {
     filterCareers(careers);
 });
+
+/* Footer Content */
+
+const cYear = document.querySelector("#year");
+const mDate = document.querySelector("#modified-date");
+
+let copyrightYear = new Date();
+let lastModified = new Date(document.lastModified);
+
+cYear.innerHTML = `©<span class="footer">${copyrightYear.getFullYear()}</span> | Caleb Beardall | Ogden, Utah`;
+mDate.innerHTML = `Last Modification: <span class="footer">${lastModified.toLocaleString('de-DE')}</span>`;

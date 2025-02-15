@@ -197,3 +197,10 @@ header ul {
     font-style: italic;
     color: var(--medium-blue-color);
 }
+
+footer {
+    text-align: center;
+    line-height: 1.5rem;
+    background-color: var(--light-grey-color);
+    padding: 1rem;
+}

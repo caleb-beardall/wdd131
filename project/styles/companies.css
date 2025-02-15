@@ -49,10 +49,10 @@ header ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0;
 }
 
-#careers-button {
+#home-button {
     display: flex;
     justify-self: flex-end;
     place-content: center;
@@ -61,7 +61,7 @@ header ul {
     padding: 0.5rem;
 }
 
-#companies-button {
+#careers-button {
     display: flex;
     place-content: center;
     width: 67%;
@@ -69,99 +69,85 @@ header ul {
     padding: 0.5rem;
 }
 
-#careers-button a {
+#home-button a {
     color: var(--medium-blue-color);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-#companies-button a {
+#careers-button a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 @media screen and (max-width: 375px) {
-    #companies-button {
+    #careers-button {
         align-items: center;
         font-size: .9rem;
     }
 }
 
-#careers-button:hover {
+#home-button:hover {
     cursor: pointer;
     border: 0.15rem solid white;
     background-color: white;
     font-weight: 700;
 }
 
-#companies-button:hover {
+#careers-button:hover {
     cursor: pointer;
     border: 0.15rem solid var(--medium-blue-color);
     background-color: var(--medium-blue-color);
     font-weight: 700;
 }
 
-h1 {
-    text-transform: uppercase;
-    font-family: var(--large-font);
-    font-weight: 900;
-    text-align: center;
-    color: white;
-    margin: 1rem 2rem;
+#welcome-container {
+    background-color: var(--light-grey-color);
+    padding: 1rem;
 }
 
-#career-company-links {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--dark-grey-color);
-}
-
-#career-company-links article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem;
-}
-
-#career-company-links img {
-    width: 50%;
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-#career-company-links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+#welcome-container h3 {
     font-size: 1.25rem;
-    font-weight: 400;
-    color: white;
-    margin: 1rem 0 0 0;
-    padding: 0.25rem 0.5rem;
-}
-
-#career-company-links a:hover {
-    color: var(--medium-blue-color);
-    background-color: white;
-    padding: 0.25rem 0.5rem;
-}
-
-#career-company-links p {
-    text-align: center;
-    color: white;
-    margin: 0.5rem 0 0 0;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
 }
 
 #small-box {
     width: 20%;
     height: 0.15rem;
     background: var(--medium-blue-color);
-    margin: 1rem 0 0 0;
+    margin: 0 0 1rem 0;
 }
 
+
+
 .highlight {
+    color: var(--medium-blue-color);
+}
+
+/* Companies Grid */
+#companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+#companies-grid article {
+    background-color: var(--light-grey-color);
+    padding: 1rem;
+}
+
+#companies-grid h3 {
+    margin: 0 0 0.5rem;
+}
+
+#companies-grid p {
+    margin: 0.5rem 0 0 0;
+}
+
+#company-rating {
     color: var(--medium-blue-color);
 }
 
