@@ -154,7 +154,7 @@ h1 {
     margin: 0.5rem 0 0 0;
 }
 
-#small-box {
+.small-box {
     width: 20%;
     height: 0.15rem;
     background: var(--medium-blue-color);
