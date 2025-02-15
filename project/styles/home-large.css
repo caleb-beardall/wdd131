@@ -17,9 +17,11 @@
         background: var(--medium-blue-color);
     }
 
+    picture {
+        display: block;
+    }
+
     #logo {
-        grid-column: 1 / 2;
-        justify-self: start;
         width: 150px;
         margin: 1rem 0 0 1rem;
     }
@@ -51,6 +53,9 @@
     }
 
     #career-company-links article {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
         margin: 0;
     }
 }

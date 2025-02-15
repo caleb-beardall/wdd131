@@ -16,8 +16,11 @@
 <body>
     <header>
         <div id="colored-bar"></div>
-        <img id="logo" src="https://placekittens.com/160/90" loading="lazy" width="160" height="90"
-            alt="Ogden Utah Temple">
+        <picture>
+            <source media="(min-width: 499)" srcset="images/logo-small-for-large" width="160" height="90">
+            <img id="logo" src="images/logo-large-for-small.webp" alt="The Wasatch Front End Developers" width="500"
+                height="281">
+        </picture>
         <nav>
             <ul>
                 <li id="home-button"><a href="#" title="Home">Home</a></li>
