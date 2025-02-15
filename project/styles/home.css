@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* #114084, #3466AA, #82B7DC, #F1F1F1, #808080, #1C1C1C */
-
 :root {
     --dark-blue-color: #114084;
     --medium-blue-color: #3466AA;
     --light-blue-color: #82B7DC;
+    --dark-grey-color: #1C1C1C;
+    --medium-grey-color: #808080;
+    --light-grey-color: #F1F1F1;
     --large-font: "Roboto", sans-serif;
     --small-font: "Raleway", sans-serif;
 }
@@ -24,7 +25,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    background-color: #1C1C1C;
+    background-color: var(--dark-grey-color);
 }
 
 #colored-bar {
@@ -110,7 +111,7 @@ h1 {
 #career-company-links {
     display: flex;
     flex-direction: column;
-    background-color: #1C1C1C;
+    background-color: var(--dark-grey-color);
 }
 
 #career-company-links article {

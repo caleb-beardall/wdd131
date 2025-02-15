@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* #114084, #3466AA, #82B7DC, #F1F1F1, #808080, #1C1C1C */
-
 :root {
     --dark-blue-color: #114084;
     --medium-blue-color: #3466AA;
     --light-blue-color: #82B7DC;
+    --dark-grey-color: #1C1C1C;
+    --medium-grey-color: #808080;
+    --light-grey-color: #F1F1F1;
     --large-font: "Roboto", sans-serif;
     --small-font: "Raleway", sans-serif;
 }
@@ -24,7 +25,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    background-color: #1C1C1C;
+    background-color: var(--dark-grey-color);
 }
 
 #colored-bar {
@@ -105,7 +106,7 @@ header ul {
 #career-form {
     display: block;
     border: none;
-    background-color: #F1F1F1;
+    background-color: var(--light-grey-color);
     padding: 1rem;
 }
 
@@ -137,7 +138,7 @@ header ul {
 
 #user-salary {
     font-size: 1.25rem;
-    color: #1C1C1C;
+    color: green;
     margin: 1rem 0;
 }
 
@@ -157,4 +158,32 @@ header ul {
     color: white;
     background-color: var(--medium-blue-color);
     border: 0.15rem solid var(--medium-blue-color);
+}
+
+#careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+#careers-grid article {
+    background-color: var(--light-grey-color);
+    padding: 1rem;
+}
+
+#careers-grid h3 {
+    margin: 0 0 0.5rem;
+}
+
+#careers-grid p {
+    margin: 0.5rem 0 0 0;
+}
+
+#company-name {
+    color: var(--medium-blue-color);
+}
+
+#career-salary {
+    color: green;
 }

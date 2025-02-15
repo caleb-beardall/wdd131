@@ -26,7 +26,7 @@
         </nav>
     </header>
     <main>
-        <form method="get" action="review.html" class="product-review">
+        <form method="get">
             <fieldset id="career-form">
                 <div>
                     <h3>What are you looking for in your <span class="highlight">career?</span></h3>
@@ -44,9 +44,12 @@
                 <div id="user-salary"></div>
                 <input type="range" id="base-salary" name="r" min="0" max="100000" value="50000" step="1000">
 
-                <input type="submit" value="Filter Results">
+                <input id="filter-results" type="submit" value="Filter Results">
             </fieldset>
         </form>
+        <section id="careers-grid">
+
+        </section>
     </main>
     <footer></footer>
 </body>
