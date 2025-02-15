@@ -34,17 +34,17 @@
                 <div id="small-box"></div>
                 <div>What <span class="highlight">position levels</span> are you considering?</div>
                 <div id="position-level">
-                    <label><input type="checkbox" name="beginner" value="yes">Beginner</label>
-                    <label><input type="checkbox" name="intermediate" value="yes">Intermediate</label>
-                    <label><input type="checkbox" name="advanced" value="yes">Advanced</label>
-                    <label><input type="checkbox" name="expert" value="yes">Expert</label>
+                    <label><input id="beginner" type="checkbox" name="beginner" value="yes">Beginner</label>
+                    <label><input id="intermediate" type="checkbox" name="intermediate" value="no">Intermediate</label>
+                    <label><input id="advanced" type="checkbox" name="advanced" value="yes">Advanced</label>
+                    <label><input id="expert" type="checkbox" name="expert" value="yes">Expert</label>
                 </div>
 
                 <label for="base-salary">What <span class="highlight">base salary</span> do you require?</label>
                 <div id="user-salary"></div>
                 <input type="range" id="base-salary" name="r" min="0" max="100000" value="50000" step="1000">
 
-                <input id="filter-results" type="submit" value="Filter Results">
+                <button id="filter-results" type="button" value="Filter Results">Filter Results</button>
             </fieldset>
         </form>
         <section id="careers-grid">

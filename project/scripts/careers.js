@@ -22,7 +22,7 @@ function displayRatingValue() {
     }
 };
 
-/* Creating the Array
+/* Creating the array and displaying it
 https://www.indeed.com/career-advice/finding-a-job/biggest-tech-companies-in-utah */
 
 const careers = [
@@ -148,8 +148,6 @@ const careers = [
     },
 ];
 
-
-
 function displayCareers(careers) {
     let careersSection = document.getElementById("careers-grid");
     careersSection.innerHTML = "";
@@ -186,20 +184,77 @@ function displayCareers(careers) {
     });
 };
 
+displayCareers(careers);
+
 /* Filtering the Data */
 
+const isBeginnerChecked = document.getElementById("beginner");
+const isIntermediateCheck = document.getElementById("intermediate");
+const isAdvancedChecked = document.getElementById("advanced");
+const isExpertChecked = document.getElementById("expert");
 
+isBeginnerChecked.addEventListener('change', () => {
+    isBeginnerChecked.classList.toggle("checked");
+});
+
+isIntermediateCheck.addEventListener('change', () => {
+    isIntermediateCheck.classList.toggle("checked");
+});
+
+isAdvancedChecked.addEventListener('change', () => {
+    isAdvancedChecked.classList.toggle("checked");
+});
+
+isExpertChecked.addEventListener('change', () => {
+    isExpertChecked.classList.toggle("checked");
+});
+
+function filterCareers(array) {
+
+    let beginnerCareers = [];
+    let intermediateCareers = [];
+    let advancedCareers = [];
+    let expertCareers = [];
+
+    let careersSection = document.getElementById("careers-grid");
+    let noResults = document.createElement("p");
+
+
+    if (isBeginnerChecked.classList.contains("checked")) {
+        beginnerCareers = array.filter(career => career.level === "entry");
+    }
+
+    if (isIntermediateCheck.classList.contains("checked")) {
+        intermediateCareers = array.filter(career => career.level === "mid");
+    }
+
+    if (isAdvancedChecked.classList.contains("checked")) {
+        advancedCareers = array.filter(career => career.level === "advanced");
+    }
+
+    if (isExpertChecked.classList.contains("checked")) {
+        expertCareers = array.filter(career => career.level === "expert");
+    }
+
+    const careerLevels = beginnerCareers.concat(intermediateCareers, advancedCareers, expertCareers);
+
+    const finalCareers = careerLevels.filter(career => career.baseSalary > range.value);
+
+    if (finalCareers.length === 0) {
+
+        careersSection.innerHTML = "";
+
+        noResults.textContent = "We're sorry. We wouldn't find any results that match your preferences.";
+        noResults.setAttribute("id", "noResults");
+        careersSection.appendChild(noResults);
+
+    } else {
+        displayCareers(finalCareers);
+    }
+};
 
 const filterResults = document.getElementById("filter-results");
 
-function filterCareers() {
-    if (document.querySelector('input[name="beginner"]:checked') === true) {
-        let newCareers = careers.filter(career => career.level === "beginner");
-    }
-
-    displayCareers(newCareers);
-}
-
-filterResults.addEventListener('click', filterCareers);
-
-displayCareers(careers);
+filterResults.addEventListener('click', () => {
+    filterCareers(careers);
+});

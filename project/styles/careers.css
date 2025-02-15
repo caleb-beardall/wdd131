@@ -142,7 +142,7 @@ header ul {
     margin: 1rem 0;
 }
 
-#career-form input[type="submit"] {
+#filter-results {
     display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -152,7 +152,7 @@ header ul {
     margin: 1rem 0 0 0;
 }
 
-#career-form input[type="submit"]:hover {
+#filter-results:hover {
     cursor: pointer;
     text-transform: uppercase;
     color: white;
@@ -186,4 +186,11 @@ header ul {
 
 #career-salary {
     color: green;
+}
+
+#noResults {
+    place-self: center;
+    text-align: center;
+    font-style: italic;
+    color: var(--medium-blue-color);
 }
